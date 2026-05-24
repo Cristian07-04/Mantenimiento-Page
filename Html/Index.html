@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="COTech Solutions - Especialistas en formateo, mantenimiento, limpieza y optimización de computadores en Barranquilla. Servicio profesional por Cris Tejedor.">
+  <meta name="keywords" content="formateo de computadores barranquilla, mantenimiento de computadores barranquilla, soporte tecnico barranquilla, cotech solutions, instalar windows, activar office">
+  <meta name="author" content="COTech Solutions">
+  <title>COTech Solutions | Soporte Técnico y Mantenimiento de Computadores en Barranquilla</title>
+
+  <!-- Google Fonts - Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Iconos: Bootstrap Icons & FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Hojas de Estilos Personalizadas -->
+  <link rel="stylesheet" href="../Css/Style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       MENU DE NAVEGACION (NAVBAR)
+       ========================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-cyber fixed-top">
+    <div class="container">
+      <a class="navbar-brand navbar-brand-tech" href="#home">
+        <i class="bi bi-cpu text-accent-gradient me-2"></i>CO<span>Tech</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item">
+            <a class="nav-link nav-link-tech active" href="#home">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-tech" href="#sobre-mi">Sobre Mí</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-tech" href="#servicios">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-tech" href="#diagnostico">Autodiagnóstico</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-tech" href="#cotizador">Presupuestos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-tech" href="#citas">Mis Reservas</a>
+          </li>
+          <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+            <a href="https://wa.me/573246352829?text=Hola%20COTech%20Solutions,%20deseo%20consultar%20por%20un%20servicio%20técnico" target="_blank" class="btn-tech btn-whatsapp">
+              <i class="bi bi-whatsapp"></i> WhatsApp Directo
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       SECCIÓN HERO (BIENVENIDA)
+       ========================================== -->
+  <header id="home" class="hero-section">
+    <div class="hero-glow-element"></div>
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-7 text-start">
+          <span class="hero-tag"><i class="bi bi-shield-check me-1"></i> COTech Solutions</span>
+          <h1 class="display-4 fw-bold text-gradient mb-3">Tecnología confiable,<br>soluciones inteligentes.</h1>
+          <p class="lead mb-4 text-white">Especialistas en formateo, mantenimiento, limpieza y optimización de computadores en Barranquilla. Garantizamos el máximo rendimiento y seguridad para tus equipos.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <button class="btn-tech" data-bs-toggle="modal" data-bs-target="#bookingModal">
+              <i class="bi bi-calendar-event"></i> Agendar Servicio
+            </button>
+            <a href="#sobre-mi" class="btn-tech-outline">
+              Conocer al Especialista
+            </a>
+          </div>
+          
+          <!-- Metricas de Confianza -->
+          <div class="row mt-5 pt-3 border-top border-secondary border-opacity-25 gy-3">
+            <div class="col-4">
+              <h4 class="fw-bold text-white mb-0">Rápido</h4>
+              <p class="small text-muted mb-0">Soporte Express</p>
+            </div>
+            <div class="col-4">
+              <h4 class="fw-bold text-white mb-0">Garantizado</h4>
+              <p class="small text-muted mb-0">Seguridad Total</p>
+            </div>
+            <div class="col-4">
+              <h4 class="fw-bold text-white mb-0">Barranquilla</h4>
+              <p class="small text-muted mb-0">Atención Local</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tarjeta Interactiva Flotante de Estado -->
+        <div class="col-lg-5 text-center position-relative">
+          <div class="floating-card-decor position-relative d-inline-block">
+            <div class="card-glass p-5 text-center d-flex flex-column align-items-center justify-content-center" style="width: 320px; height: 320px; margin: 0 auto; border-color: rgba(0, 82, 255, 0.35); box-shadow: var(--blue-glow);">
+              <div class="mb-4 text-accent-gradient" style="font-size: 5rem;">
+                <i class="fa-solid fa-microchip fa-pulse" style="color: var(--accent-blue);"></i>
+              </div>
+              <h4 class="text-white mb-1">COTech System</h4>
+              <p class="small text-muted mb-3">Rendimiento Optimizado</p>
+              <div class="w-100 bg-dark rounded-pill overflow-hidden mb-2" style="height: 6px;">
+                <div class="bg-primary h-100" style="width: 95%; animation: float-slow 4s infinite alternate;"></div>
+              </div>
+              <span class="badge bg-primary bg-opacity-25 text-white border border-primary border-opacity-50 px-3 py-1"><i class="bi bi-check-all me-1"></i> Optimización Activa</span>
+            </div>
+            
+            <!-- Detalles Flotantes -->
+            <div class="card-glass p-3 position-absolute d-flex align-items-center gap-3 floating-card-decor" style="top: -20px; left: -10px; max-width: 220px; animation-delay: 1.2s;">
+              <div class="text-primary fs-3"><i class="bi bi-speedometer"></i></div>
+              <div class="text-start">
+                <h6 class="mb-0 text-white">Formateo SO</h6>
+                <p class="mb-0 small text-muted">Windows Activado</p>
+              </div>
+            </div>
+            
+            <div class="card-glass p-3 position-absolute d-flex align-items-center gap-3 floating-card-decor" style="bottom: -20px; right: -10px; max-width: 220px; animation-delay: 2.8s;">
+              <div class="text-success fs-3"><i class="bi bi-lightning-charge"></i></div>
+              <div class="text-start">
+                <h6 class="mb-0 text-white">Limpieza Física</h6>
+                <p class="mb-0 small text-muted">Cero Polvo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SECCIÓN SOBRE MÍ (EDUCACIÓN & EXPERIENCIA)
+       ========================================== -->
+  <section id="sobre-mi" class="py-5 position-relative border-top border-secondary border-opacity-10">
+    <div class="container py-5">
+      <div class="row align-items-center gy-5">
+        <!-- Columna de Perfil y Formación -->
+        <div class="col-lg-6">
+          <span class="hero-tag"><i class="bi bi-mortarboard-fill me-1"></i> Perfil Profesional</span>
+          <h2 class="display-5 text-gradient mb-4">Sobre el Especialista</h2>
+          <p class="lead text-white mb-3">Hola, soy <strong>Cris O. Tejedor</strong>, el fundador y técnico especialista detrás de COTech Solutions.</p>
+          <p class="text-muted mb-4">Soy estudiante de Ingeniería en el programa **Tecnólogo en Gestión de Sistemas Informáticos** en la **Institución Universitaria de Barranquilla (IUB)**. Mi pasión por la tecnología me ha llevado a certificarme profesionalmente en el mantenimiento físico y lógico de infraestructura digital, permitiéndome brindar diagnósticos certeros y soluciones con altos estándares de calidad.</p>
+          
+          <!-- Habilidades Técnicas Rápidas -->
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <span class="badge bg-dark border border-secondary text-muted px-3 py-2">Optimización de Windows</span>
+            <span class="badge bg-dark border border-secondary text-muted px-3 py-2">Licenciamiento de Office</span>
+            <span class="badge bg-dark border border-secondary text-muted px-3 py-2">Mantenimiento Correctivo</span>
+            <span class="badge bg-dark border border-secondary text-muted px-3 py-2">Limpieza Profunda</span>
+            <span class="badge bg-dark border border-secondary text-muted px-3 py-2">Soporte Técnico</span>
+          </div>
+        </div>
+
+        <!-- Columna de Credenciales y Educación Académica -->
+        <div class="col-lg-6">
+          <div class="card-glass p-4" style="background: rgba(10, 15, 26, 0.7);">
+            <h4 class="text-white mb-4"><i class="bi bi-patch-check text-primary me-2"></i>Formación y Credenciales Académicas</h4>
+            
+            <div class="academic-card">
+              <h6 class="text-white mb-1">Tecnología en Gestión de Sistemas Informáticos</h6>
+              <p class="mb-1 text-muted small"><strong>Institución Universitaria de Barranquilla</strong> | En Curso</p>
+              <p class="mb-0 fs-7 text-muted">Formación en ingeniería aplicada, gestión de servidores, seguridad e infraestructura de sistemas.</p>
+            </div>
+
+            <div class="academic-card">
+              <h6 class="text-white mb-1">Técnico en Mantenimiento de Sistemas Informáticos</h6>
+              <p class="mb-1 text-muted small">Título Técnico Certificado</p>
+              <p class="mb-0 fs-7 text-muted">Especialización en ensamble avanzado, soldadura básica, diagnóstico de fallos físicos y lógicos en computadores de escritorio y laptops.</p>
+            </div>
+
+            <div class="academic-card">
+              <h6 class="text-white mb-1">Técnico Auxiliar en Sistemas Informáticos</h6>
+              <p class="mb-1 text-muted small">Título Técnico Certificado</p>
+              <p class="mb-0 fs-7 text-muted">Fundamentos de sistemas operativos, instalación segura de software de oficina y redes básicas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECCIÓN DE SERVICIOS
+       ========================================== -->
+  <section id="servicios" class="py-5 position-relative border-top border-secondary border-opacity-10">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <span class="hero-tag"><i class="bi bi-gear-fill me-1"></i> Portafolio de Servicios</span>
+        <h2 class="display-5 text-gradient">Servicios Informáticos Especializados</h2>
+        <p class="max-w-md mx-auto">Ofrecemos soporte profesional garantizado para que tu computador vuele como el primer día.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+        <!-- Servicio 1: Formateo Básico -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-glass p-4 service-card-item">
+            <div class="service-icon-box">
+              <i class="bi bi-windows"></i>
+            </div>
+            <h5 class="text-white mb-2">Formateo + SO Activado</h5>
+            <p class="fs-7 text-muted">Instalación limpia y optimizada del sistema operativo Windows con su respectiva activación permanente y segura.</p>
+            <ul class="list-unstyled text-muted small my-3 fs-7">
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Instalación de Windows 10/11</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Activación segura permanente</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Configuración de Drivers</li>
+            </ul>
+            <div class="mt-4 pt-2 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white fs-6">$60.000 COP</span>
+              <button class="btn-tech-outline py-1 px-3 fs-7" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="document.getElementById('booking-service').value='Formateo + Sistema Operativo Activado'">Pedir</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 2: Formateo + Programas -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-glass p-4 service-card-item">
+            <div class="service-icon-box">
+              <i class="bi bi-window-stack"></i>
+            </div>
+            <h5 class="text-white mb-2">Formateo + SO + Programas</h5>
+            <p class="fs-7 text-muted">Instalación limpia de Windows activado, configuración de drivers y licenciamiento de la suite completa de Microsoft Office y programas esenciales.</p>
+            <ul class="list-unstyled text-muted small my-3 fs-7">
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Windows + Office activados</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Navegadores y PDF Pro</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Reproductores y utilidades</li>
+            </ul>
+            <div class="mt-4 pt-2 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white fs-6">$85.000 COP</span>
+              <button class="btn-tech-outline py-1 px-3 fs-7" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="document.getElementById('booking-service').value='Formateo + SO Activado + Programas'">Pedir</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 3: Combo Premium (SO + Programas + Limpieza) -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-glass p-4 service-card-item border-primary border-opacity-25" style="box-shadow: 0 0 15px rgba(0, 82, 255, 0.1);">
+            <div class="service-icon-box" style="background: var(--accent-blue); color: #fff;">
+              <i class="bi bi-rocket-takeoff-fill"></i>
+            </div>
+            <h5 class="text-white mb-2">Combo Mantenimiento Full</h5>
+            <p class="fs-7 text-muted">El paquete definitivo para tu computador. Incluye optimización lógica completa, formateo de sistema, instalación de suites y limpieza profunda de hardware físico.</p>
+            <ul class="list-unstyled text-muted small my-3 fs-7">
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Windows + Office + Apps</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Desarme y limpieza física</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Cambio pasta térmica</li>
+            </ul>
+            <div class="mt-4 pt-2 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white fs-6">$110.000 COP</span>
+              <button class="btn-tech py-1 px-3 fs-7" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="document.getElementById('booking-service').value='Formateo + SO + Programas + Limpieza de Hardware'">Pedir</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicio 4: Limpieza Física -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card-glass p-4 service-card-item">
+            <div class="service-icon-box">
+              <i class="bi bi-wind"></i>
+            </div>
+            <h5 class="text-white mb-2">Limpieza de Hardware</h5>
+            <p class="fs-7 text-muted">Eliminación completa de suciedad, polvo y residuos en componentes internos, disipadores y ventiladores. Cambio de pasta térmica de alta calidad.</p>
+            <ul class="list-unstyled text-muted small my-3 fs-7">
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Lubricación de ventiladores</li>
+              <li class="bi bi-check2 text-primary me-2"><i class="bi bi-check2 text-primary me-2"></i>Limpieza interna de placa</li>
+              <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Pasta térmica de alta gama</li>
+            </ul>
+            <div class="mt-4 pt-2 border-top border-secondary border-opacity-25 d-flex justify-content-between align-items-center">
+              <span class="fw-bold text-white fs-6">$30.000 COP</span>
+              <button class="btn-tech-outline py-1 px-3 fs-7" data-bs-toggle="modal" data-bs-target="#bookingModal" onclick="document.getElementById('booking-service').value='Limpieza de Hardware'">Pedir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Domicilio Banner -->
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-8">
+          <div class="card-glass p-3 text-center border-info border-opacity-25" style="background: rgba(0, 82, 255, 0.03);">
+            <p class="mb-0 text-white fs-7"><i class="bi bi-truck me-2 text-primary"></i>¿Prefieres soporte en la comodidad de tu hogar? Ofrecemos <strong>servicio técnico a domicilio en Barranquilla</strong> por un costo adicional de solo <strong>+$20.000 COP</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECCIÓN DE ASISTENTE DE DIAGNÓSTICO E COTIZADOR
+       ========================================== -->
+  <section id="diagnostico" class="py-5 position-relative border-top border-secondary border-opacity-10">
+    <div class="container py-5">
+      <div class="text-center mb-5">
+        <span class="hero-tag"><i class="bi bi-cpu-fill me-1"></i> Asistentes Inteligentes</span>
+        <h2 class="display-5 text-gradient">Diagnóstico y Presupuesto Interactivo</h2>
+        <p class="max-w-md mx-auto">Selecciona los síntomas de tu equipo para obtener recomendaciones técnicas inmediatas y cotiza tu servicio en pesos colombianos.</p>
+      </div>
+
+      <div class="tech-container">
+        <div class="row gy-5">
+          <!-- Columna Izquierda: Autodiagnóstico de Síntomas -->
+          <div class="col-lg-6 border-lg-end pe-lg-5">
+            <h3 class="text-white mb-4"><i class="bi bi-magic text-accent-gradient me-2"></i>Asistente de Síntomas</h3>
+            <p class="text-muted mb-4 small">¿Qué comportamiento inusual presenta tu computador? Selecciona una opción para que nuestro sistema te indique el camino a seguir.</p>
+            
+            <div class="d-flex flex-column gap-3 mb-4">
+              <div class="diagnose-option" data-problem="slow">
+                <i class="fa-solid fa-gauge-high fs-4 text-primary"></i>
+                <div>
+                  <h6 class="mb-0 text-white">Mi equipo va extremadamente lento</h6>
+                  <p class="mb-0 text-muted fs-7">Tarda minutos en iniciar y los programas se cuelgan.</p>
+                </div>
+              </div>
+              <div class="diagnose-option" data-problem="heat">
+                <i class="fa-solid fa-temperature-three-quarters fs-4 text-warning"></i>
+                <div>
+                  <h6 class="mb-0 text-white">Se calienta mucho y los ventiladores suenan fuerte</h6>
+                  <p class="mb-0 text-muted fs-7">El equipo se apaga de repente o emite un soplido molesto.</p>
+                </div>
+              </div>
+              <div class="diagnose-option" data-problem="combo_full">
+                <i class="fa-solid fa-triangle-exclamation fs-4 text-danger"></i>
+                <div>
+                  <h6 class="mb-0 text-white">Fallas generales de software y suciedad acumulada</h6>
+                  <p class="mb-0 text-muted fs-7">El sistema tiene virus, errores continuos y requiere limpieza física.</p>
+                </div>
+              </div>
+              <div class="diagnose-option" data-problem="office">
+                <i class="fa-solid fa-file-word fs-4 text-info"></i>
+                <div>
+                  <h6 class="mb-0 text-white">Falta activar Windows u Office (Word, Excel)</h6>
+                  <p class="mb-0 text-muted fs-7">Sale marca de agua de activación o alerta de licencia expirada.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Resultado del Diagnóstico -->
+            <div id="diagnostic-result" class="diagnostic-result mt-4">
+              <h5 class="text-white mb-2"><i class="bi bi-info-circle text-primary me-2"></i>Resultado del Escaneo:</h5>
+              <h6 class="text-white" id="diag-title">-</h6>
+              <p class="mb-2 text-muted fs-7">Complejidad técnica: <span id="diag-gravity" class="fw-bold text-warning">-</span></p>
+              <div class="mb-3 fs-7">
+                <p class="mb-1 text-white"><strong>Causa Probable:</strong></p>
+                <p class="text-muted mb-2" id="diag-cause">-</p>
+                <p class="mb-1 text-white"><strong>Solución Sugerida por COTech:</strong></p>
+                <p class="text-muted mb-0" id="diag-solution">-</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-25">
+                <div>
+                  <span class="small text-muted d-block">Tarifa Estimada:</span>
+                  <span class="d-block text-white fw-bold" id="diag-price">-</span>
+                </div>
+                <button class="btn-tech py-1 px-3 fs-7" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                  Solicitar este servicio
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Cotizador Dinámico -->
+          <div id="cotizador" class="col-lg-6 ps-lg-5">
+            <h3 class="text-white mb-4"><i class="bi bi-calculator-fill text-accent-gradient me-2"></i>Cotizador en Tiempo Real</h3>
+            <p class="text-muted mb-4 small">Selecciona el combo base de mantenimiento que requieres y marca si deseas domicilio para calcular el total exacto.</p>
+            
+            <div class="services-list mb-4">
+              <!-- Item 1 -->
+              <div class="calc-checkbox-container">
+                <div class="d-flex align-items-center gap-3">
+                  <input type="radio" class="calc-radio" name="base-service" id="srv-basic" value="combo-basic" checked>
+                  <div>
+                    <h6 class="mb-0 text-white">Formateo + Sistema Operativo Activado</h6>
+                    <p class="mb-0 text-muted fs-7">Instalación limpia de Windows + Drivers básicos</p>
+                  </div>
+                </div>
+                <span class="text-white fw-bold">$60.000</span>
+              </div>
+              
+              <!-- Item 2 -->
+              <div class="calc-checkbox-container">
+                <div class="d-flex align-items-center gap-3">
+                  <input type="radio" class="calc-radio" name="base-service" id="srv-prog" value="combo-programs">
+                  <div>
+                    <h6 class="mb-0 text-white">Formateo + SO + Programas + Office</h6>
+                    <p class="mb-0 text-muted fs-7">Windows + Drivers + Office activado + Esenciales</p>
+                  </div>
+                </div>
+                <span class="text-white fw-bold">$85.000</span>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="calc-checkbox-container">
+                <div class="d-flex align-items-center gap-3">
+                  <input type="radio" class="calc-radio" name="base-service" id="srv-combo-full" value="combo-full">
+                  <div>
+                    <h6 class="mb-0 text-white">Combo Full (SO + Programas + Limpieza)</h6>
+                    <p class="mb-0 text-muted fs-7">Mantenimiento lógico + Limpieza física interna profunda</p>
+                  </div>
+                </div>
+                <span class="text-white fw-bold">$110.000</span>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="calc-checkbox-container">
+                <div class="d-flex align-items-center gap-3">
+                  <input type="radio" class="calc-radio" name="base-service" id="srv-clean-ind" value="hardware-clean">
+                  <div>
+                    <h6 class="mb-0 text-white">Limpieza de Hardware Individual</h6>
+                    <p class="mb-0 text-muted fs-7">Desarme físico, remoción de polvo y pasta térmica</p>
+                  </div>
+                </div>
+                <span class="text-white fw-bold">$30.000</span>
+              </div>
+
+              <hr class="border-secondary border-opacity-25 my-3">
+
+              <!-- Domicilio Adicional -->
+              <div class="calc-checkbox-container" style="border-color: rgba(0, 82, 255, 0.25);">
+                <div class="d-flex align-items-center gap-3">
+                  <input type="checkbox" id="srv-domicilio">
+                  <div>
+                    <h6 class="mb-0 text-white">¿Solicitar Servicio a Domicilio?</h6>
+                    <p class="mb-0 text-muted fs-7">Un técnico se trasladará a tu ubicación en Barranquilla</p>
+                  </div>
+                </div>
+                <span class="text-primary fw-bold">+$20.000</span>
+              </div>
+            </div>
+
+            <!-- Sección de Cupones -->
+            <div class="row g-2 align-items-center mb-4">
+              <div class="col-8">
+                <input type="text" class="form-control form-control-cyber" id="coupon-code" placeholder="CUPÓN (E.g. COTECH10 o TECH2026)">
+                <div id="coupon-status" class="form-text" style="display: none;"></div>
+              </div>
+              <div class="col-4">
+                <button type="button" class="btn-tech-outline w-100 py-2 fs-7 text-center justify-content-center" id="btn-apply-coupon">Aplicar</button>
+              </div>
+            </div>
+
+            <!-- Desglose de Totales -->
+            <div class="card-glass p-3 mb-4 bg-dark bg-opacity-50">
+              <div class="d-flex justify-content-between mb-2 fs-7 text-muted">
+                <span>Subtotal Cotización:</span>
+                <span id="calc-subtotal">$0 COP</span>
+              </div>
+              <div class="d-flex justify-content-between mb-2 fs-7 text-success">
+                <span>Descuento aplicado:</span>
+                <span id="calc-discount">-$0 COP</span>
+              </div>
+              <hr class="border-secondary my-2">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="text-white fw-bold">TOTAL ESTIMADO:</span>
+                <span class="text-accent-gradient fs-4 fw-bold" id="calc-total">$0 COP</span>
+              </div>
+            </div>
+
+            <button class="btn-tech w-100 py-3 text-center justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal">
+              <i class="bi bi-clipboard-check me-2"></i> Solicitar Reparación Cotizada
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECCIÓN DE MIS RESERVAS (DASHBOARD DE LOCALSTORAGE)
+       ========================================== -->
+  <section id="citas" class="py-5 position-relative border-top border-secondary border-opacity-10">
+    <div class="container py-5">
+      <div class="row gy-5 align-items-center">
+        <!-- Columna de Información -->
+        <div class="col-lg-5">
+          <span class="hero-tag"><i class="bi bi-calendar-check me-1"></i> Panel de Seguimiento</span>
+          <h2 class="display-5 text-gradient">Gestiona tus Solicitudes</h2>
+          <p class="text-muted lead mb-4">COTech Solutions te proporciona este módulo interactivo para supervisar las solicitudes de soporte que registres en esta máquina. Toda la información se almacena localmente en tu navegador de forma segura.</p>
+          <div class="card-glass p-4 border-info border-opacity-25" style="background: rgba(0, 82, 255, 0.02);">
+            <h6 class="text-white mb-3"><i class="bi bi-shield-lock-fill text-primary me-2"></i>Proceso de Atención COTech</h6>
+            <ol class="small text-muted ps-3 mb-0 d-flex flex-column gap-2">
+              <li>Registras tus datos y la fecha en que deseas el servicio.</li>
+              <li>La solicitud se guarda en el panel con estado "Pendiente de Confirmación".</li>
+              <li>Cris Tejedor te contactará vía WhatsApp para acordar la hora exacta de visita o entrega.</li>
+              <li>Puedes cancelar o eliminar el registro desde el botón de papelera si cambias de parecer.</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Columna del Panel / Dashboard Local -->
+        <div class="col-lg-7">
+          <div class="card-glass p-4" style="background: rgba(5, 7, 13, 0.85); border-color: rgba(0, 82, 255, 0.25);">
+            <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-secondary border-opacity-25 pb-3">
+              <h4 class="text-white mb-0"><i class="bi bi-display text-accent-gradient me-2"></i>Solicitudes Registradas</h4>
+              <span class="badge bg-primary bg-opacity-25 text-white border border-primary border-opacity-50"><i class="bi bi-cpu-fill me-1"></i> Dashboard Local</span>
+            </div>
+
+            <!-- Listado de citas de LocalStorage -->
+            <div id="bookings-list" class="d-flex flex-column gap-3" style="max-height: 380px; overflow-y: auto;">
+              <!-- Se inyecta dinámicamente mediante JS -->
+            </div>
+
+            <!-- Mensaje vacío de citas -->
+            <div id="no-bookings-message" class="text-center py-5">
+              <div class="text-muted fs-1 mb-3"><i class="bi bi-calendar-x"></i></div>
+              <h5 class="text-white mb-2">No tienes solicitudes registradas</h5>
+              <p class="text-muted small mb-4">Haz clic abajo para programar tu primer formateo u optimización con nosotros.</p>
+              <button class="btn-tech-outline" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                <i class="bi bi-calendar-plus"></i> Registrar Nueva Cita
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       MODAL DE RESERVA DE CITAS (CYBER MODAL)
+       ========================================== -->
+  <div class="modal fade modal-cyber" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-white" id="bookingModalLabel"><i class="bi bi-calendar2-plus text-accent-gradient me-2"></i>Registrar Solicitud Técnica</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="bookingForm">
+          <div class="modal-body p-4">
+            <div class="row g-3">
+              <!-- Nombre -->
+              <div class="col-md-6">
+                <label for="booking-name" class="form-label text-muted small">Nombre Completo *</label>
+                <input type="text" class="form-control form-control-cyber" id="booking-name" required placeholder="Ej. Juan Pérez">
+              </div>
+              
+              <!-- Correo -->
+              <div class="col-md-6">
+                <label for="booking-email" class="form-label text-muted small">Correo Electrónico *</label>
+                <input type="email" class="form-control form-control-cyber" id="booking-email" required placeholder="juan@ejemplo.com">
+              </div>
+
+              <!-- Teléfono -->
+              <div class="col-md-6">
+                <label for="booking-phone" class="form-label text-muted small">WhatsApp de Contacto *</label>
+                <input type="tel" class="form-control form-control-cyber" id="booking-phone" required placeholder="Ej. 3001234567">
+              </div>
+
+              <!-- Fecha -->
+              <div class="col-md-6">
+                <label for="booking-date" class="form-label text-muted small">Fecha Estimada de Atención *</label>
+                <input type="date" class="form-control form-control-cyber" id="booking-date" required>
+              </div>
+
+              <!-- Servicio -->
+              <div class="col-md-6">
+                <label for="booking-service" class="form-label text-muted small">Servicio Requerido</label>
+                <select class="form-select form-control-cyber" id="booking-service">
+                  <option value="Formateo + Sistema Operativo Activado" selected>Formateo + Sistema Operativo Activado ($60.000 COP)</option>
+                  <option value="Formateo + SO Activado + Programas">Formateo + SO Activado + Programas ($85.000 COP)</option>
+                  <option value="Formateo + SO + Programas + Limpieza de Hardware">Formateo + SO + Programas + Limpieza de Hardware ($110.000 COP)</option>
+                  <option value="Limpieza de Hardware">Limpieza de Hardware sola ($30.000 COP)</option>
+                </select>
+              </div>
+
+              <!-- Modalidad -->
+              <div class="col-md-6">
+                <label for="booking-type" class="form-label text-muted small">Modalidad</label>
+                <select class="form-select form-control-cyber" id="booking-type">
+                  <option value="A Domicilio (Barranquilla)" selected>Servicio a Domicilio (+$20.000 COP)</option>
+                  <option value="Entrega en Laboratorio">Llevar equipo al técnico</option>
+                  <option value="Soporte Remoto">Asistencia Remota AnyDesk (Solo Software)</option>
+                </select>
+              </div>
+
+              <!-- Notas -->
+              <div class="col-12">
+                <label for="booking-notes" class="form-label text-muted small">Describe el equipo y fallas (Marca, modelo, si requiere respaldo de datos, etc.)</label>
+                <textarea class="form-control form-control-cyber" id="booking-notes" rows="3" placeholder="Ej. Computador de escritorio Asus. Necesito formatear a Windows 10, instalar Office y hacer respaldo de mis fotos. También tiene mucho polvo interno."></textarea>
+              </div>
+            </div>
+            <p class="small text-muted mt-3 mb-0">* Todos los campos marcados con asterisco son obligatorios para procesar la orden.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-tech-outline py-2" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn-tech py-2">Registrar Solicitud</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       WHATSAPP BOTÓN FLOTANTE PERMANENTE
+       ========================================== -->
+  <a href="https://wa.me/573246352829?text=Hola%20COTech%20Solutions,%20deseo%20consultar%20por%20un%20servicio%20técnico%20para%20mi%20computador" class="whatsapp-float text-center" target="_blank" title="Chatear en WhatsApp con Cris Tejedor">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- ==========================================
+       WIDGET FLOTANTE DEL CHATBOT DE SOPORTE TÉCNICO
+       ========================================== -->
+  <div class="chat-widget">
+    <div id="chat-toggle" class="chat-btn position-relative">
+      <i class="bi bi-chat-dots-fill"></i>
+      <span id="chat-ping" class="badge-ping" style="display: none;"></span>
+    </div>
+
+    <!-- Caja de Chat -->
+    <div id="chat-box" class="chat-box">
+      <div class="chat-header">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-cpu text-primary fs-4"></i>
+          <div>
+            <h6 class="text-white mb-0">TechBot COTech</h6>
+            <small class="text-success" style="font-size: 0.75rem;"><i class="bi bi-circle-fill" style="font-size: 0.5rem; vertical-align: middle;"></i> Activo online</small>
+          </div>
+        </div>
+        <button id="close-chat" class="btn-close btn-close-white" style="font-size: 0.8rem;"></button>
+      </div>
+      
+      <!-- Cuerpo del Chat -->
+      <div id="chat-body" class="chat-body">
+        <div class="chat-bubble bot">
+          ¡Hola! Bienvenido a **COTech Solutions**. Soy tu asistente virtual. ¿Qué duda técnica puedo resolver sobre nuestros servicios de computadores en Barranquilla?
+        </div>
+        
+        <!-- Opciones rápidas de clic -->
+        <div id="chat-options" class="chat-options-container">
+          <button class="chat-option-btn" data-topic="precios">¿Cuánto cuestan los servicios?</button>
+          <button class="chat-option-btn" data-topic="ubicacion">¿Cuál es su ubicación?</button>
+          <button class="chat-option-btn" data-topic="garantia">¿Los trabajos tienen garantía?</button>
+          <button class="chat-option-btn" data-topic="horario">¿Cuáles son los horarios?</button>
+          <button class="chat-option-btn" data-topic="sobre_mi">¿Quién es el especialista?</button>
+          <button class="chat-option-btn" data-topic="whatsapp">¿Tienen enlace directo a WhatsApp?</button>
+        </div>
+      </div>
+      
+      <!-- Entrada del Chat -->
+      <form id="chat-form" class="chat-footer">
+        <input type="text" id="chat-input" class="form-control form-control-cyber fs-7 py-2" placeholder="Escribe tu consulta aquí..." autocomplete="off">
+        <button type="submit" class="btn-tech py-1 px-3 fs-7"><i class="bi bi-send-fill"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       PIE DE PÁGINA (FOOTER)
+       ========================================== -->
+  <footer class="py-5 bg-dark border-top border-secondary border-opacity-10 text-muted">
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-4 text-start">
+          <a class="navbar-brand navbar-brand-tech text-white mb-3 d-inline-block" href="#home">
+            <i class="bi bi-cpu text-accent-gradient me-2"></i>CO<span>Tech</span>
+          </a>
+          <p class="small text-muted">COTech Solutions es una marca personal liderada por Cris O. Tejedor, dedicada a ofrecer servicios profesionales de soporte técnico, formateo, instalación de licencias y mantenimiento físico de equipos de cómputo en la ciudad de Barranquilla.</p>
+          <div class="d-flex gap-3 fs-5 mt-3">
+            <a href="https://wa.me/573246352829" class="text-muted hover-text-cyan" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:cris.o.tejedor@gmail.com" class="text-muted hover-text-cyan"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 ms-lg-auto text-start">
+          <h6 class="text-white mb-3">Navegación</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#home" class="text-muted text-decoration-none hover-text-cyan">Inicio</a></li>
+            <li><a href="#sobre-mi" class="text-muted text-decoration-none hover-text-cyan">Sobre Mí</a></li>
+            <li><a href="#servicios" class="text-muted text-decoration-none hover-text-cyan">Servicios</a></li>
+            <li><a href="#diagnostico" class="text-muted text-decoration-none hover-text-cyan">Diagnóstico</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 text-start">
+          <h6 class="text-white mb-3">Servicios Técnicos</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small">
+            <li><a href="#servicios" class="text-muted text-decoration-none hover-text-cyan">Formateo de PC</a></li>
+            <li><a href="#servicios" class="text-muted text-decoration-none hover-text-cyan">Windows Activado</a></li>
+            <li><a href="#servicios" class="text-muted text-decoration-none hover-text-cyan">Suite Microsoft Office</a></li>
+            <li><a href="#servicios" class="text-muted text-decoration-none hover-text-cyan">Limpieza de Hardware</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-3 text-start">
+          <h6 class="text-white mb-3">Contacto de Soporte</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 small text-muted">
+            <li><i class="bi bi-geo-alt me-2 text-primary"></i> Barranquilla, Colombia</li>
+            <li><i class="bi bi-whatsapp me-2 text-primary"></i> 3246352829</li>
+            <li><i class="bi bi-envelope me-2 text-primary"></i> cris.o.tejedor@gmail.com</li>
+            <li><i class="bi bi-clock me-2 text-primary"></i> Lun - Sab: 8:00 AM - 7:00 PM</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary border-opacity-10 my-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <span class="small">&copy; 2026 COTech Solutions. Todos los derechos reservados.</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+          <span class="small text-muted">Diseñado por Antigravity AI para Cris Tejedor</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Lógica Interactiva Personalizada -->
+  <script src="../Js/Script.js"></script>
+</body>
+</html>

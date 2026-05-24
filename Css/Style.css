@@ -1,0 +1,693 @@
+/* 
+  Estilos CSS Premium para COTech Solutions
+  Tema: Minimalista Tecnológico (Negro, Azul Eléctrico y Blanco)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --bg-dark: #000000;
+  --bg-deep: #07090f;
+  --bg-card: rgba(15, 23, 42, 0.65);
+  --bg-card-hover: rgba(22, 34, 61, 0.85);
+  --accent-blue: #0052ff; /* Azul Eléctrico */
+  --accent-cyan: #38bdf8; /* Azul Claro / Cian */
+  --text-white: #ffffff;
+  --text-muted: #94a3b8;
+  --border-light: rgba(255, 255, 255, 0.09);
+  --border-glow: rgba(0, 82, 255, 0.25);
+  --font-main: 'Outfit', sans-serif;
+  --glow-shadow: 0 0 20px rgba(0, 82, 255, 0.45);
+  --blue-glow: 0 0 25px rgba(0, 82, 255, 0.35);
+}
+
+/* --- Estilos Generales --- */
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo decorativo con rejilla de puntos azul eléctrico */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(rgba(0, 82, 255, 0.09) 1.5px, transparent 1.5px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: -2;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 85vw;
+  height: 80vh;
+  background: radial-gradient(circle, rgba(0, 82, 255, 0.08) 0%, rgba(7, 9, 15, 0) 65%);
+  pointer-events: none;
+  z-index: -1;
+  filter: blur(90px);
+}
+
+/* Scrollbar Personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  border: 1px solid var(--border-light);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+  box-shadow: var(--glow-shadow);
+}
+
+/* --- Tipografía --- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-white);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 40%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-accent-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+p {
+  color: var(--text-muted);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* --- Botones --- */
+.btn-tech {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #003cc4 100%);
+  color: var(--text-white);
+  border: none;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--glow-shadow);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-tech:hover {
+  background: linear-gradient(135deg, #2563eb 0%, var(--accent-blue) 100%);
+  color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 82, 255, 0.7);
+}
+
+.btn-tech-outline {
+  background: transparent;
+  color: var(--text-white);
+  border: 1px solid var(--accent-blue);
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-tech-outline:hover {
+  background: rgba(0, 82, 255, 0.1);
+  color: var(--text-white);
+  transform: translateY(-2px);
+  box-shadow: var(--blue-glow);
+  border-color: var(--accent-blue);
+}
+
+/* --- Botones Especiales de Contacto --- */
+.btn-whatsapp {
+  background: #25d366;
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp:hover {
+  background: #20ba5a;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(37, 211, 102, 0.6);
+}
+
+/* --- Glassmorphism Cards --- */
+.card-glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-glass:hover {
+  background: var(--bg-card-hover);
+  transform: translateY(-6px);
+  border-color: rgba(0, 82, 255, 0.35);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 82, 255, 0.2);
+}
+
+/* --- Navbar Estilo Cyber --- */
+.navbar-cyber {
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border-light);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-cyber.scrolled {
+  padding: 10px 0;
+  background: rgba(0, 0, 0, 0.98) !important;
+  border-bottom: 1px solid rgba(0, 82, 255, 0.25);
+}
+
+.navbar-brand-tech {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.navbar-brand-tech span {
+  color: var(--accent-blue);
+  text-shadow: 0 0 10px rgba(0, 82, 255, 0.5);
+}
+
+.nav-link-tech {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link-tech::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ffffff, var(--accent-blue));
+  transition: width 0.3s ease;
+}
+
+.nav-link-tech:hover, .nav-link-tech.active {
+  color: var(--text-white) !important;
+}
+
+.nav-link-tech:hover::after, .nav-link-tech.active::after {
+  width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  padding: 180px 0 100px;
+  position: relative;
+}
+
+.hero-tag {
+  background: rgba(0, 82, 255, 0.1);
+  border: 1px solid rgba(0, 82, 255, 0.25);
+  color: #93c5fd;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  box-shadow: 0 0 15px rgba(0, 82, 255, 0.15);
+  margin-bottom: 20px;
+}
+
+.hero-glow-element {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 82, 255, 0.1) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+  animation: float-slow 12s infinite alternate ease-in-out;
+}
+
+/* --- Sección Sobre Mí --- */
+.academic-card {
+  border-left: 3px solid var(--accent-blue);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 16px 20px;
+  border-radius: 0 12px 12px 0;
+  margin-bottom: 15px;
+  border-top: 1px solid var(--border-light);
+  border-right: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.academic-card:hover {
+  background: rgba(0, 82, 255, 0.03);
+  border-left-color: #ffffff;
+}
+
+/* --- Servicios --- */
+.service-icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 82, 255, 0.12);
+  border: 1px solid rgba(0, 82, 255, 0.25);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #93c5fd;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.card-glass:hover .service-icon-box {
+  background: var(--accent-blue);
+  color: var(--text-white);
+  box-shadow: var(--glow-shadow);
+  transform: rotateY(180deg);
+}
+
+.btn-filter {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-filter:hover, .btn-filter.active {
+  background: var(--accent-blue);
+  color: var(--text-white);
+  border-color: var(--accent-blue);
+  box-shadow: var(--glow-shadow);
+}
+
+/* --- Asistente de Diagnóstico e Cotizador --- */
+.tech-container {
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+  background: rgba(5, 7, 13, 0.85);
+  padding: 40px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.tech-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-blue), #ffffff, transparent);
+}
+
+.diagnose-option {
+  cursor: pointer;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 15px 20px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.diagnose-option:hover {
+  border-color: rgba(0, 82, 255, 0.4);
+  background: rgba(0, 82, 255, 0.03);
+  transform: translateX(4px);
+}
+
+.diagnose-option.active {
+  border-color: var(--accent-blue);
+  background: rgba(0, 82, 255, 0.08);
+  box-shadow: 0 0 15px rgba(0, 82, 255, 0.2);
+}
+
+.diagnose-option.active i {
+  color: #93c5fd;
+}
+
+.diagnostic-result {
+  border-left: 3px solid var(--accent-blue);
+  background: rgba(0, 82, 255, 0.02);
+  padding: 20px;
+  border-radius: 0 12px 12px 0;
+  display: none;
+}
+
+/* Calculadora */
+.calc-checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.calc-checkbox-container:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.calc-checkbox-container input[type="radio"], 
+.calc-checkbox-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent-blue);
+  cursor: pointer;
+}
+
+/* --- Panel de Reservas --- */
+.booking-badge {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.booking-badge:hover {
+  border-color: rgba(0, 82, 255, 0.35);
+  background: rgba(0, 82, 255, 0.02);
+}
+
+.booking-badge .delete-booking {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #ef4444;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.booking-badge .delete-booking:hover {
+  transform: scale(1.2);
+}
+
+/* Modal Cyber */
+.modal-cyber .modal-content {
+  background: var(--bg-deep);
+  border: 1px solid rgba(0, 82, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 35px rgba(0, 82, 255, 0.2);
+}
+
+.modal-cyber .modal-header {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.modal-cyber .modal-footer {
+  border-top: 1px solid var(--border-light);
+}
+
+.form-control-cyber {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  color: var(--text-white);
+  border-radius: 8px;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control-cyber:focus {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 10px rgba(0, 82, 255, 0.3);
+  color: var(--text-white);
+}
+
+.form-control-cyber option {
+  background-color: #07090f;
+  color: var(--text-white);
+}
+
+/* --- WhatsApp Flotante Fijo --- */
+.whatsapp-float {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  color: white;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+/* --- Chatbot de Soporte Técnico --- */
+.chat-widget {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.chat-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #001f7a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-white);
+  font-size: 1.6rem;
+  cursor: pointer;
+  box-shadow: var(--blue-glow);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.chat-btn:hover {
+  transform: scale(1.08) rotate(15deg);
+  box-shadow: 0 0 30px rgba(0, 82, 255, 0.7);
+}
+
+.chat-btn .badge-ping {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  background-color: var(--accent-blue);
+  border-radius: 50%;
+  border: 2px solid var(--bg-dark);
+}
+
+.chat-box {
+  width: 360px;
+  height: 480px;
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  background: var(--bg-deep);
+  border: 1px solid rgba(0, 82, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateY(20px) scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.chat-box.open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chat-header {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(7, 9, 15, 0.9) 100%);
+  border-bottom: 1px solid var(--border-light);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: radial-gradient(circle at bottom right, rgba(0, 82, 255, 0.03) 0%, transparent 60%);
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.chat-bubble.bot {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-light);
+  color: var(--text-white);
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+.chat-bubble.user {
+  background: var(--accent-blue);
+  color: var(--text-white);
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 82, 255, 0.2);
+}
+
+.chat-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.chat-option-btn {
+  background: rgba(0, 82, 255, 0.07);
+  border: 1px solid rgba(0, 82, 255, 0.25);
+  color: #93c5fd;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chat-option-btn:hover {
+  background: var(--accent-blue);
+  color: var(--text-white);
+  box-shadow: var(--blue-glow);
+}
+
+.chat-footer {
+  padding: 12px;
+  border-top: 1px solid var(--border-light);
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  gap: 8px;
+}
+
+/* --- Animaciones --- */
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-card {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.floating-card-decor {
+  animation: float-card 5s infinite ease-in-out;
+}
+
+/* Media Queries */
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 140px 0 60px;
+    text-align: center;
+  }
+  .tech-container {
+    padding: 25px;
+  }
+  .whatsapp-float {
+    bottom: 95px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  .chat-widget {
+    bottom: 25px;
+    right: 20px;
+  }
+  .chat-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .chat-box {
+    width: calc(100vw - 40px);
+    right: -10px;
+    height: 420px;
+  }
+}
