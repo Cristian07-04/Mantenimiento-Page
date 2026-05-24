@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .text-gradient {
   background: linear-gradient(135deg, #ffffff 40%, var(--accent-blue) 100%);
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent;
 }
 
@@ -96,10 +96,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  color: var(--text-muted);
+  color: #cbd5e1; /* más visible sobre fondos oscuros */
   font-weight: 300;
   line-height: 1.6;
 }
+
+/* Asegurar que textos en .text-muted (Bootstrap) se vean */
+.text-muted {
+  color: #cbd5e1 !important;
+}
+
 
 /* --- Botones --- */
 .btn-tech {
