@@ -1,0 +1,711 @@
+/* ==========================================
+   COTech Solutions - Estilos Premium (Cyber Dark & Glassmorphism)
+   Autor: Antigravity AI para Cris Tejedor
+   ========================================== */
+
+/* 1. CONFIGURACIÓN DEL SISTEMA DE DISEÑO */
+:root {
+  /* Paleta de Colores Cyber */
+  --bg-main: #0b0f19;
+  --bg-darker: #05070d;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.06);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(0, 82, 255, 0.35);
+  
+  --accent-blue: #0052ff;
+  --accent-blue-glow: rgba(0, 82, 255, 0.4);
+  --accent-purple: #7000ff;
+  --accent-cyan: #00f0ff;
+  --accent-cyan-glow: rgba(0, 240, 255, 0.35);
+  
+  --text-primary: #ffffff;
+  --text-secondary: #f8fafc;
+  --text-muted: #94a3b8;
+  
+  /* Sombras y Resplandores */
+  --blue-glow: 0 0 25px rgba(0, 82, 255, 0.25);
+  --cyan-glow: 0 0 25px rgba(0, 240, 255, 0.25);
+  --purple-glow: 0 0 25px rgba(112, 0, 255, 0.2);
+  
+  /* Transiciones y Bordes */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --border-radius-lg: 16px;
+  --border-radius-md: 10px;
+}
+
+/* 2. ESTILOS BASE Y GENERALES */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  font-family: 'Outfit', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo con degradado ambiental y efectos de luz */
+body::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 82, 255, 0.07) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 65%;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(112, 0, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Scrollbar Personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  border: 1px solid var(--bg-darker);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+  box-shadow: var(--blue-glow);
+}
+
+/* 3. UTILIDADES DE MAQUETADO Y COMPONENTES */
+
+/* Glassmorphism Card */
+.card-glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  transition: var(--transition-smooth);
+}
+
+.card-glass:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--blue-glow);
+  transform: translateY(-5px);
+}
+
+/* Títulos y textos degradados */
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 20%, var(--accent-cyan) 60%, var(--accent-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-accent-gradient {
+  background: linear-gradient(135deg, var(--accent-cyan) 0%, var(--accent-blue) 50%, var(--accent-purple) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Etiquetas (Badge Cyber) */
+.hero-tag {
+  background: rgba(0, 82, 255, 0.08);
+  border: 1px solid rgba(0, 82, 255, 0.25);
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 82, 255, 0.05);
+}
+
+/* Botones Premium */
+.btn-tech {
+  background: linear-gradient(135deg, var(--accent-blue) 0%, #003cc0 100%);
+  color: #ffffff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 15px rgba(0, 82, 255, 0.2);
+  text-decoration: none;
+}
+
+.btn-tech:hover {
+  box-shadow: var(--blue-glow);
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-tech-outline {
+  background: transparent;
+  color: #ffffff !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-tech-outline:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan) !important;
+  box-shadow: var(--cyan-glow);
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  background: #25d366 !important;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2) !important;
+}
+
+.btn-whatsapp:hover {
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.45) !important;
+}
+
+/* 4. MENÚ DE NAVEGACION (NAVBAR) */
+.navbar-cyber {
+  background: rgba(11, 15, 25, 0.75) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 15px 0;
+  transition: var(--transition-smooth);
+}
+
+.navbar-cyber.scrolled {
+  padding: 10px 0;
+  background: rgba(5, 7, 13, 0.9) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand-tech {
+  font-weight: 800;
+  font-size: 1.45rem;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+}
+
+.navbar-brand-tech span {
+  color: var(--accent-cyan);
+}
+
+.nav-link-tech {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+.nav-link-tech:hover {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-link-tech.active {
+  color: var(--accent-cyan) !important;
+  font-weight: 600;
+  background: rgba(0, 240, 255, 0.05) !important;
+  border: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+/* 5. SECCIÓN HERO (BIENVENIDA) */
+.hero-section {
+  padding: 180px 0 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glow-element {
+  position: absolute;
+  top: 15%;
+  right: 15%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 240, 255, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Tarjeta Flotante Hero */
+.floating-card-decor {
+  transition: var(--transition-smooth);
+}
+
+/* Animaciones de Flotación */
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes float-medium {
+  0% { transform: translateY(0px) translate(0px); }
+  50% { transform: translateY(-15px) translate(5px); }
+  100% { transform: translateY(0px) translate(0px); }
+}
+
+.col-lg-5 .floating-card-decor > .card-glass {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.col-lg-5 .floating-card-decor > .position-absolute:nth-child(2) {
+  animation: float-medium 8s ease-in-out infinite;
+}
+
+.col-lg-5 .floating-card-decor > .position-absolute:nth-child(3) {
+  animation: float-medium 8s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+/* 6. SECCIÓN SOBRE MÍ */
+.academic-card {
+  border-left: 3px solid var(--accent-blue);
+  padding-left: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.academic-card::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 0;
+  height: 0;
+  width: 3px;
+  background-color: var(--accent-cyan);
+  transition: var(--transition-smooth);
+}
+
+.academic-card:hover {
+  transform: translateX(5px);
+}
+
+.academic-card:hover::before {
+  height: 100%;
+}
+
+.academic-card h6 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.fs-7 {
+  font-size: 0.85rem;
+}
+
+/* 7. PORTAFOLIO DE SERVICIOS */
+.service-card-item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--accent-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  margin-bottom: 20px;
+  border: 1px solid rgba(0, 240, 255, 0.1);
+  transition: var(--transition-smooth);
+}
+
+.service-card-item:hover .service-icon-box {
+  background: var(--accent-cyan);
+  color: var(--bg-main);
+  box-shadow: var(--cyan-glow);
+  transform: scale(1.05);
+}
+
+/* 8. SECCIÓN DIAGNÓSTICO Y COTIZADOR */
+.tech-container {
+  background: rgba(5, 7, 13, 0.6);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 40px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.diagnose-option {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 15px 20px;
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.diagnose-option:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.diagnose-option.active {
+  background: rgba(0, 82, 255, 0.08);
+  border-color: var(--accent-blue);
+  box-shadow: var(--blue-glow);
+}
+
+.diagnose-option.active i {
+  animation: pulse-icon 1.5s infinite;
+}
+
+@keyframes pulse-icon {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 4px var(--accent-blue)); }
+  100% { transform: scale(1); }
+}
+
+/* Contenedores del calculador */
+.calc-checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: var(--border-radius-md);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  margin-bottom: 12px;
+  transition: var(--transition-smooth);
+}
+
+.calc-checkbox-container:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.calc-radio, input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--accent-blue);
+}
+
+/* Caja de Resultados del Diagnóstico */
+.diagnostic-result {
+  background: rgba(0, 82, 255, 0.02);
+  border: 1px solid rgba(0, 82, 255, 0.15);
+  border-radius: var(--border-radius-md);
+  padding: 22px;
+  display: none; /* Se activa vía JS */
+  transition: var(--transition-smooth);
+  animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Inputs de Formulario Modernizados */
+.form-control-cyber {
+  background: rgba(255, 255, 255, 0.02) !important;
+  border: 1px solid var(--border-color) !important;
+  color: #ffffff !important;
+  padding: 11px 16px;
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+.form-control-cyber::placeholder {
+  color: #57606f;
+}
+
+.form-control-cyber:focus {
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: var(--accent-blue) !important;
+  box-shadow: var(--blue-glow) !important;
+  outline: none;
+}
+
+select.form-control-cyber {
+  cursor: pointer;
+}
+
+select.form-control-cyber option {
+  background-color: var(--bg-main);
+  color: #ffffff;
+}
+
+/* 9. MÓDULO MIS RESERVAS & LOCALSTORAGE */
+.booking-dashboard-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  padding: 18px;
+  position: relative;
+  transition: var(--transition-smooth);
+}
+
+.booking-dashboard-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.booking-card-delete {
+  background: transparent;
+  border: none;
+  color: #ff4757;
+  font-size: 1.15rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.booking-card-delete:hover {
+  background: rgba(255, 71, 87, 0.1);
+  color: #ff6b81;
+}
+
+/* 10. MODAL DE RESERVA (CYBER MODAL) */
+.modal-cyber .modal-content {
+  background-color: rgba(11, 15, 25, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 82, 255, 0.25);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--blue-glow);
+}
+
+.modal-cyber .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.modal-cyber .modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* 11. BOTÓN DE WHATSAPP FLOTANTE */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 55px;
+  height: 55px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition-smooth);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.55);
+  color: #ffffff;
+}
+
+/* 12. CHATBOT DE SOPORTE TÉCNICO */
+.chat-widget {
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  z-index: 1000;
+}
+
+.chat-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), var(--blue-glow);
+  transition: var(--transition-smooth);
+}
+
+.chat-btn:hover {
+  transform: scale(1.05) rotate(5deg);
+  box-shadow: 0 6px 20px rgba(0, 82, 255, 0.4), var(--blue-glow);
+}
+
+/* Caja del Chat */
+.chat-box {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 350px;
+  height: 480px;
+  background: rgba(11, 15, 25, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 82, 255, 0.2);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), var(--blue-glow);
+  
+  /* Estados de transición */
+  transform: scale(0.9);
+  opacity: 0;
+  pointer-events: none;
+  transform-origin: bottom right;
+  transition: var(--transition-smooth);
+}
+
+.chat-box.active {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.chat-header {
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  scrollbar-width: thin;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  max-width: 80%;
+  animation: slideDown 0.3s ease forwards;
+}
+
+.chat-bubble.bot {
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+  align-self: flex-start;
+  border-radius: 12px 12px 12px 2px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.chat-bubble.user {
+  background: var(--accent-blue);
+  color: #ffffff;
+  align-self: flex-end;
+  border-radius: 12px 12px 2px 12px;
+  box-shadow: 0 2px 8px rgba(0, 82, 255, 0.25);
+}
+
+.chat-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 5px;
+  animation: slideDown 0.4s ease forwards;
+}
+
+.chat-option-btn {
+  background: rgba(0, 240, 255, 0.06);
+  border: 1px solid rgba(0, 240, 255, 0.15);
+  color: var(--accent-cyan);
+  font-size: 0.78rem;
+  padding: 8px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-align: left;
+  font-weight: 500;
+}
+
+.chat-option-btn:hover {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+}
+
+.chat-footer {
+  padding: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  gap: 8px;
+  background: rgba(5, 7, 13, 0.5);
+}
+
+/* Indicador de ping (Notificación) */
+.badge-ping {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--accent-cyan);
+  border-radius: 50%;
+  box-shadow: var(--cyan-glow);
+  animation: pulse-ping 2s infinite;
+}
+
+@keyframes pulse-ping {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(0, 240, 255, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 240, 255, 0); }
+}
+
+/* 13. HOVER EFFECTS EN FOOTER */
+.hover-text-cyan {
+  transition: var(--transition-smooth);
+}
+
+.hover-text-cyan:hover {
+  color: var(--accent-cyan) !important;
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+}
