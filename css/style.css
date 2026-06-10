@@ -43,6 +43,21 @@
 .text-info { color: var(--accent-cyan) !important; }
 .text-muted { color: var(--text-muted) !important; }
 
+/* NUEVA CLASE PARA EL CHATBOT */
+.text-cyan { color: var(--accent-cyan) !important; }
+
+/* Corrección de enlaces genéricos en modo oscuro */
+a:not([class]) {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+a:not([class]):hover {
+  color: #ffffff;
+  text-shadow: var(--cyan-glow);
+}
+
 .bg-primary { background-color: var(--accent-blue) !important; }
 .bg-success { background-color: var(--accent-green) !important; }
 .bg-danger { background-color: #ff3366 !important; }
@@ -471,8 +486,10 @@ body::after {
   transition: var(--transition-smooth);
 }
 
+/* Ajuste de Placeholder para mayor visibilidad */
 .form-control-cyber::placeholder {
-  color: #57606f;
+  color: #94a3b8 !important; /* Gris azulado claro para destacar en fondo oscuro */
+  opacity: 1; 
 }
 
 .form-control-cyber:focus {
@@ -486,9 +503,17 @@ select.form-control-cyber {
   cursor: pointer;
 }
 
+/* Ajuste para las listas desplegables (Selects) */
 select.form-control-cyber option {
-  background-color: var(--bg-main);
+  background-color: var(--bg-darker);
   color: #ffffff;
+  padding: 10px;
+}
+
+/* Corrección para textos de ayuda y form-text */
+.form-text {
+  color: #cbd5e1 !important; 
+  font-weight: 500;
 }
 
 /* 9. MÓDULO MIS RESERVAS & LOCALSTORAGE */
